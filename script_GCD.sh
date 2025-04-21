@@ -14,7 +14,7 @@ fi
 
 k=0
 sr_n1=$((a1<a2 ? a1:a2))
-sr_n2=$(($sr_n1/2))
+sr_n2=$((sr_n1/2))
 sr=$((a1>a2 ? a1:a2))
 
 
@@ -26,8 +26,6 @@ if (($de==0));
   ((k+=1))
 fi
 done
-echo "$k"
-
 
 
 if (($k!=2));
@@ -42,7 +40,7 @@ if (($k!=2));
   fi
   done
  exit
-elif (($k==2));
+elif (($k>=2));
  then
   r=$((sr%sr_n1))
   if (($r==0));
@@ -56,3 +54,4 @@ elif (($k==2));
   fi
  exit
 fi
+
